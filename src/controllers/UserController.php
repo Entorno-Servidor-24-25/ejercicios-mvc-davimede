@@ -28,11 +28,4 @@ class UserController {
             echo "Error al guardar el usuario.";
         }
     }
-
-    // Método para mostrar una lista de usuarios
-    public function getAllUsers() {
-        global $connection;
-        $users = User::getAll($connection);
-        require_once BASE_PATH . '/views/userList.php';
-    }
 }
