@@ -8,6 +8,8 @@
 ### Pregunta 2: ¿Qué camino sigue el código cuando el usuario introduce datos en el formulario?
 **Descripción**: Detalla el proceso desde que el usuario envía el formulario hasta que se guarda la información y se muestra una respuesta en pantalla.
 
+**Respuesta 2**: Cuando el usuario envía el formulario, los datos se envían a saveUser.php, donde se carga el controlador UserController y se llama al método saveUser(). Este método recoge el nombre ingresado, crea un nuevo objeto User y lo guarda en la base de datos. Si el guardado es exitoso, se muestra la vista userSuccess.php, confirmando que el usuario fue creado correctamente. Si ocurre un error, se muestra un mensaje indicando el fallo.
+
 > **Nota:** Al crear nuevas vistas, añade alguna forma de navegar entre ellas de modo que el usuario pueda acceder a todas las vistas sin tener que modificar la URL directamente.
 
 ### Ejercicio 1: Mostrar Todos los Usuarios
