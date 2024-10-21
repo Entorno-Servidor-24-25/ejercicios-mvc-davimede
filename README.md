@@ -3,6 +3,8 @@
 ### Pregunta 1: ¿Qué camino sigue el código cuando el usuario accede por primera vez a `index.php`?
 **Descripción**: Explica qué ocurre desde que el usuario carga `index.php` hasta que se muestra algo en pantalla. Incluye cómo intervienen el controlador, las vistas y el modelo, si es necesario.
 
+**Respuesta 1**: Cuando el usuario accede por primera vez a index.php, define la ruta base (BASE_PATH), carga el controlador UserController y llama al método showForm() que muestra el formulario para crear un nuevo usuario. El formulario se exporta desde el archivo userForm.php, que incluye un campo para el nombre y un botón para enviar el formulario, permitiendo que el usuario ingrese y guarde datos en la base de datos.
+
 ### Pregunta 2: ¿Qué camino sigue el código cuando el usuario introduce datos en el formulario?
 **Descripción**: Detalla el proceso desde que el usuario envía el formulario hasta que se guarda la información y se muestra una respuesta en pantalla.
 
