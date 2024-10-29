@@ -11,6 +11,8 @@
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" required>
         <button type="submit">Create User</button>
+        <br>
+        <a href="../listUsers.php">List of users</a>
     </form>
 </body>
 </html>

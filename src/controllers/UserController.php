@@ -22,10 +22,35 @@ class UserController {
 
         // Guardar el usuario en la base de datos
         if ($user->save($connection)) {
-            // Cargar la vista de éxito
             require_once BASE_PATH . '/views/userSuccess.php';
         } else {
             echo "Error al guardar el usuario.";
+        }
+    }
+
+    // Método para mostrar una lista de usuarios
+    public function getAllUsers() {
+        global $connection;
+        $users = User::getAll($connection);
+        require_once BASE_PATH . '/views/userList.php';
+    }
+
+    // Método para eliminar usuarios
+    public function deleteUser() {
+        global $connection;
+    
+        // Verificar si el ID fue enviado por el formulario
+        if (isset($_POST['id'])) {
+            $id = $_POST['id'];
+    
+            if (User::delete($connection, $id)) {
+                echo "Usuario eliminado correctamente.";
+                $this->getAllUsers();
+            } else {
+                echo "Error al eliminar el usuario.";
+            }
+        } else {
+            echo "ID de usuario no proporcionado.";
         }
     }
 }
